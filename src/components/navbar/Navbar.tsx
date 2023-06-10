@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   interface ILink {
@@ -30,7 +31,7 @@ const Navbar = () => {
       url: '/about',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Contact',
       url: '/contact',
     },
@@ -42,8 +43,22 @@ const Navbar = () => {
   ];
 
   return (
-    <div>
-      <Link href="/">Awen</Link>
+    <div className="p-6 flex items-center justify-between">
+      <Link
+        href="/"
+        className="font-bold text-2xl flex items-center drop-shadow-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700">
+        <Image className="mr-3" src="/favicon.svg" width={35} height={35} alt="Awen"></Image> Awen
+      </Link>
+      <div>
+        {linksArray.map((link) => (
+          <Link
+            href={link.url}
+            key={link.id}
+            className="mr-5 text-base ease-in duration-300 hover:text-blue-700 ">
+            {link.title}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

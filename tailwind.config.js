@@ -9,10 +9,13 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      dropShadow: {
+        '3xl': '13px 15px 25px rgba(29, 9, 255, 0.85) ',
+        '4xl': '1px -15px 30px rgba(29, 9, 255, 0.85) ',
       },
     },
   },
   plugins: [],
-}
+};
