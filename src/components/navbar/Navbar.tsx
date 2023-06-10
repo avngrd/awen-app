@@ -43,21 +43,26 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="p-6 flex items-center justify-between">
+    <div className=" px-20 py-6 flex items-center justify-between">
       <Link
         href="/"
         className="font-bold text-2xl flex items-center drop-shadow-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700">
         <Image className="mr-3" src="/favicon.svg" width={35} height={35} alt="Awen"></Image> Awen
       </Link>
-      <div>
-        {linksArray.map((link) => (
-          <Link
-            href={link.url}
-            key={link.id}
-            className="mr-5 text-base ease-in duration-300 hover:text-blue-700 ">
-            {link.title}
-          </Link>
-        ))}
+      <div className="flex flex-row items-center">
+        <div>
+          {linksArray.map((link) => (
+            <Link
+              href={link.url}
+              key={link.id}
+              className="mr-5 text-base ease-in duration-300 hover:text-blue-700 ">
+              {link.title}
+            </Link>
+          ))}
+        </div>
+        <button className="bg-blue-700 rounded-xl ease-out duration-300 px-3 py-1 hover:opacity-75 ">
+          Logout
+        </button>
       </div>
     </div>
   );
