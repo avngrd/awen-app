@@ -15,6 +15,9 @@ module.exports = {
         '3xl': '13px 15px 25px rgba(29, 9, 255, 0.85) ',
         '4xl': '1px -15px 30px rgba(29, 9, 255, 0.85) ',
       },
+      boxShadow: {
+        '3xl': '-5px 15px 40px -14px rgba(29, 9, 255, 0.5)',
+      },
     },
   },
   plugins: [],

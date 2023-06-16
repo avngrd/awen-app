@@ -27,8 +27,8 @@ const Navbar = () => {
     },
     {
       id: 4,
-      title: 'About',
-      url: '/about',
+      title: 'Currencies',
+      url: '/currencies',
     },
     {
       id: 5,
