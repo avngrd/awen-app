@@ -18,7 +18,7 @@ const Navbar = () => {
     {
       id: 2,
       title: 'Portfolio',
-      url: '/dashboard',
+      url: '/portfolio',
     },
     {
       id: 3,

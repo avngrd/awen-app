@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameinput {
+  padding: 10px 20px;
+  background-color: rgb(23 37 84);
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.nameinput:focus {
+  border: 1px solid #425effee;
+}
+
+.messagearea {
+  padding: 10px 20px;
+  resize: none;
+  height: 200px;
+  background-color: rgb(23 37 84);
+  outline: none;
+  transition: all 0.3s;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.messagearea:focus {
+  border: 1px solid #425effee;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #425effee;
+}
+
+.animatewindow {
+  margin-top: 40px;
+  max-width: 700px;
+  /* height: 380px; */
+  border-radius: 10px;
+  /* box-shadow: -5px 5px 50px rgba(29, 9, 255, 0.5); */
+}

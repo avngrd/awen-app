@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 export default function Home() {
@@ -29,6 +31,13 @@ export default function Home() {
           <Image className=" mr-3" src="/mm.svg" width={40} height={40} alt="MetaMask"></Image>{' '}
           Connect with MetaMask
         </button>
+        <Image
+          className="absolute animate-pulse
+           right-80 bottom-32 -z-10 blur-3xl "
+          src="/shadow.png"
+          width={200}
+          height={200}
+          alt="Shadow"></Image>
       </div>
     </div>
   );

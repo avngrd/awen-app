@@ -6,7 +6,7 @@ const Ticker = () => {
   const cryptoCurrencies = useTicker();
 
   return (
-    <div className=" grid grid-cols-3 grid-rows-3">
+    <div className=" grid grid-cols-2 grid-rows-3">
       {cryptoCurrencies?.map((crypto) => (
         <Crypto key={crypto.id} crypto={crypto} />
       ))}

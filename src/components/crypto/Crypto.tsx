@@ -2,6 +2,9 @@ import React, { memo } from 'react';
 import Image from 'next/image';
 import { formatPrice } from '@/utils';
 import Skeleton from '@/components/crypto/Skeleton';
+import styles from '@/components/crypto/page.module.css';
+import { motion } from 'framer-motion';
+
 interface Props {
   crypto: {
     id: string;
@@ -28,7 +31,10 @@ const Crypto = ({ crypto }: Props) => {
       : 'bg-red-400'
     : 'bg-white-600';
   return (
-    <div className="m-5  p-6 bg-slate-900 shadow-3xl rounded-xl">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className={`m-5  p-6 bg-slate-900 shadow-3xl rounded-xl ${styles.card}`}>
       <div className="flex flex-row mb-4">
         <Image
           height={40}
@@ -62,7 +68,7 @@ const Crypto = ({ crypto }: Props) => {
       ) : (
         <Skeleton></Skeleton>
       )}
-    </div>
+    </motion.div>
   );
 };
 
