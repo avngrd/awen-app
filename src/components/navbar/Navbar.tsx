@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 
 const Navbar = () => {
   interface ILink {
@@ -22,8 +23,8 @@ const Navbar = () => {
     },
     {
       id: 3,
-      title: 'Blog',
-      url: '/blog',
+      title: 'News',
+      url: '/news',
     },
     {
       id: 4,
@@ -50,6 +51,7 @@ const Navbar = () => {
         <Image className="mr-3" src="/favicon.svg" width={35} height={35} alt="Awen"></Image> Awen
       </Link>
       <div className="flex flex-row items-center">
+        <DarkModeToggle />
         <div>
           {linksArray.map((link) => (
             <Link

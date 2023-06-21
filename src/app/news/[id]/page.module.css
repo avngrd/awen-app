@@ -1,0 +1,21 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.author {
+  display: flex;
+}
+
+.author p {
+  margin-left: 20px;
+}
+
+.bottom {
+  margin-top: 50px;
+}
