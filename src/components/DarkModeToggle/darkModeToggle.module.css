@@ -1,13 +1,13 @@
 .container {
   width: 42px;
   height: 24px;
-  border: 1.5px solid #53c28b70;
+  border: 1.5px solid rgb(29 78 216);
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px;
-  margin-right: 10px;
+  padding: 3px;
+  margin-right: 20px;
   position: relative;
   cursor: pointer;
 }
@@ -16,10 +16,14 @@
   font-size: 12px;
 }
 
+.theme {
+  transition: all 0.3s;
+}
+
 .ball {
-  width: 15px;
-  height: 15px;
-  background-color: #53c28b;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(29 78 216);
   border-radius: 50%;
   position: absolute;
 }

@@ -42,3 +42,15 @@ body {
   border-radius: 2px;
   border: 0px solid rgba(15, 0, 187, 1);
 }
+
+.light {
+  background-color: #fff;
+  color: rgb(29 78 216);
+  transition: all 0.3s;
+}
+
+.dark {
+  color: #fff;
+  background: rgb(15 23 42);
+  transition: all 0.3s;
+}

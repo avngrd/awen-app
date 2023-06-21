@@ -62,7 +62,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <button className="bg-blue-700 rounded-xl ease-out duration-300 px-3 py-1 hover:opacity-75 ">
+        <button className="bg-blue-700 text-white rounded-xl ease-out duration-300 px-3 py-1 hover:opacity-75 ">
           Logout
         </button>
       </div>
