@@ -1,5 +1,5 @@
 .container {
-  width: 42px;
+  width: 48px;
   height: 24px;
   border: 1.5px solid rgb(29 78 216);
   border-radius: 30px;
@@ -21,8 +21,8 @@
 }
 
 .ball {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   background-color: rgb(29 78 216);
   border-radius: 50%;
   position: absolute;

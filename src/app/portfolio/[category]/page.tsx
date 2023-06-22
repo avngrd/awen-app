@@ -1,21 +1,34 @@
 import React from 'react';
 import Image from 'next/image';
+import { items } from './data';
+import { notFound } from 'next/navigation';
+
+const getData = (cat) => {
+  const data = items[cat];
+
+  if (data) {
+    return data;
+  }
+
+  return notFound();
+};
 
 const Category = ({ params }) => {
+  const data = getData(params.category);
+
   return (
     <div className="flex justify-between mt-10">
-      <div className=" max-w-lg">
-        <p>
-          DeFi, short for Decentralized Finance, refers to a rapidly growing movement within the
-          cryptocurrency and blockchain space. It encompasses a range of financial applications and
-          platforms that are built on decentralized networks, aiming to provide traditional
-          financial services without the need for intermediaries like banks or other centralized
-          authorities.
-        </p>
-      </div>
-      <div>
-        <Image src="/defi.jpeg" width={500} height={500} alt="defi"></Image>
-      </div>
+      {data.map((item) => (
+        <div key={item.id}>
+          <div className=" max-w-lg">
+            <h1 className="font-bold text-3xl">{item.title}</h1>
+            <p>{item.description}</p>
+          </div>
+          <div>
+            <Image src={item.image} width={500} height={500} alt="defi"></Image>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

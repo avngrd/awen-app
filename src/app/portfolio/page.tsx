@@ -11,13 +11,13 @@ const Portfolio = () => {
     <div className="">
       <h1 className="text-center font-bold text-3xl">All projects</h1>
       <div className={styles.items}>
-        <Link href="portfolio/defi" className={styles.item}>
+        <Link href="/portfolio/defi" className={styles.item}>
           <span className={styles.categoryname}>DeFi</span>
         </Link>
-        <Link href="portfolio/designs" className={styles.item}>
-          <span className={styles.categoryname}>Designs</span>
+        <Link href="/portfolio/scam" className={styles.item}>
+          <span className={styles.categoryname}>Scam</span>
         </Link>
-        <Link href="portfolio/code" className={styles.item}>
+        <Link href="/portfolio/code" className={styles.item}>
           <span className={styles.categoryname}>Code</span>
         </Link>
       </div>

@@ -2,7 +2,17 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const News = () => {
+// async function getData() {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+//   if (!res.ok) {
+//     throw new Error('Failed to fetch data');
+//   }
+
+//   return res.json();
+// }
+
+const News = async () => {
+  // const data = await getData();
   return (
     <div className="px-20 mt-10">
       <Link href="/news/testId" className="flex flex-row m-5">
