@@ -1,0 +1,16 @@
+.imagebox {
+  max-width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.categbox {
+  -webkit-border-radius: 21px;
+  border-radius: 21px;
+  padding: 20px;
+  background: #0f172a;
+  -webkit-box-shadow: 9px 9px 22px #060911, -9px -9px 22px #182543;
+  box-shadow: 9px 9px 22px #060911, -9px -9px 22px #182543;
+  color: #ffff;
+}
