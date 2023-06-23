@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.2.5",
+    "@types/node": "^20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
@@ -17,7 +17,7 @@
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
     "lottie-react": "^2.4.0",
-    "mongoose": "^7.3.1",
+    "mongoose": "6.11.1",
     "next": "13.4.4",
     "postcss": "8.4.24",
     "react": "18.2.0",
