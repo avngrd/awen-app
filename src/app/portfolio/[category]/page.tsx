@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import styles from './page.module.css';
 import { items } from './data';
 import { notFound } from 'next/navigation';
 
@@ -17,15 +18,22 @@ const Category = ({ params }) => {
   const data = getData(params.category);
 
   return (
-    <div className="flex justify-between mt-10">
+    <div className="flex mt-10 mx-auto flex-col justify-center">
       {data.map((item) => (
-        <div key={item.id}>
+        <div
+          key={item.id}
+          className={`flex m-5 bg-sky-400 max-w-3xl px-3 py-2 rounded-xl items-center ${styles.categbox}`}>
           <div className=" max-w-lg">
             <h1 className="font-bold text-3xl">{item.title}</h1>
             <p>{item.description}</p>
           </div>
           <div>
-            <Image src={item.image} width={500} height={500} alt="defi"></Image>
+            <Image
+              src={item.image}
+              className={styles.imagebox}
+              width={200}
+              height={200}
+              alt="defi"></Image>
           </div>
         </div>
       ))}
