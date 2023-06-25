@@ -5,12 +5,11 @@ import mongoose from 'mongoose';
 
 export const GET = async (request) => {
   try {
+    // mongoose.set('strictQuery', false);
     await connect();
-
-    mongoose.set('strictQuery', true);
     const posts = await Post.find();
     return new NextResponse(posts, { status: 200 });
-  } catch (error) {
+  } catch (err) {
     return new NextResponse('Database Error', { status: 500 });
   }
 };
