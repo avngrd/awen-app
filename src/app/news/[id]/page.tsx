@@ -1,41 +1,53 @@
 import React from 'react';
 import styles from '@/app/news/[id]/page.module.css';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
-const BlogPost = () => {
+async function getData(id) {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    cache: 'no-store',
+  });
+
+  if (!res.ok) {
+    return notFound();
+  }
+
+  return res.json();
+}
+// 2.10.31
+
+export async function generateMetadata({ params }) {
+  const post = await getData(params.id);
+  return {
+    title: post.title,
+    description: post.desc,
+  };
+}
+
+const BlogPost = async ({ params }) => {
+  const data = await getData(params.id);
   return (
     <div className="px-20">
       <div className={styles.top}>
         <div className={styles.left}>
-          <h1 className={styles.title}>Title</h1>
-          <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, doloremque!
-          </p>
+          <h1 className={styles.title}>{data.title}</h1>
+          <p className={styles.desc}>{data.desc}</p>
           <div className={styles.author}>
-            <Image src="/nft1.jpg" width={30} height={30} alt="Avatar"></Image>
-            <p>Name</p>
+            <Image
+              src={data.image}
+              width={30}
+              height={30}
+              alt="Avatar"
+              className=" rounded-2xl"></Image>
+            <p>{data.username}</p>
           </div>
         </div>
         <div className={styles.right}>
-          <Image src="/nft1.jpg" width={300} height={300} alt="Avatar"></Image>
+          <Image src={data.image} width={300} height={300} alt="Avatar"></Image>
         </div>
       </div>
       <div className={styles.bottom}>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ullam ad animi cumque
-          molestias suscipit voluptatibus nihil, dolore delectus alias maxime deserunt, illo, eum
-          inventore esse dolorum obcaecati enim assumenda.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ullam ad animi cumque
-          molestias suscipit voluptatibus nihil, dolore delectus alias maxime deserunt, illo, eum
-          inventore esse dolorum obcaecati enim assumenda.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ullam ad animi cumque
-          molestias suscipit voluptatibus nihil, dolore delectus alias maxime deserunt, illo, eum
-          inventore esse dolorum obcaecati enim assumenda.
-        </p>
+        <p>{data.content}</p>
       </div>
     </div>
   );
