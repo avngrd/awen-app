@@ -14,7 +14,6 @@ async function getData(id) {
 
   return res.json();
 }
-// 2.10.31
 
 export async function generateMetadata({ params }) {
   const post = await getData(params.id);
