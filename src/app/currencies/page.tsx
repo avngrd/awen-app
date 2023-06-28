@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Ticker from '@/components/ticker/Ticker';
 
-const About = () => {
+const About = async () => {
   return (
     <div className="px-20 mt-14 flex flex-row justify-between">
       <div className=" max-w-xl">
