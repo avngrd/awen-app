@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/currencies/page.tsx", "src/utils/hooks.jsx", "src/utils/index.jsx", "src/context/ThemeContext.tsx", "src/app/portfolio/[category]/data.ts", "src/app/api/posts/route.ts", "src/models/Post.ts", "src/models/User.js", "src/utils/db.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/currencies/page.tsx", "src/utils/hooks.jsx", "src/utils/index.jsx", "src/context/ThemeContext.tsx", "src/app/portfolio/[category]/data.ts", "src/app/api/posts/route.ts", "src/models/Post.ts", "src/models/User.js", "src/utils/db.js", "src/app/dashboard/page.jsx"],
   "exclude": ["node_modules"]
 }

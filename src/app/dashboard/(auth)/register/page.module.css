@@ -1,0 +1,56 @@
+.formacc {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: rgba(0, 46, 201, 1);
+
+  padding: 20px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.linkc {
+  display: flex;
+  justify-content: center;
+}
+
+.userinput {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: rgb(23 37 84);
+  outline: none;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.userinput:focus {
+  border: 2px solid #ffff;
+}
+
+.buttonreg {
+  padding: 8px;
+  background-color: #425effee;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.buttonreg:hover {
+  opacity: 0.7;
+}
+
+.linkc {
+  font-weight: 300;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}

@@ -1,9 +1,14 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
+import { signOut, useSession } from 'next-auth/react';
 
 const Navbar = () => {
+  const session = useSession();
+
   interface ILink {
     id: number;
     title: string;
@@ -62,9 +67,13 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <button className="bg-blue-700 text-white rounded-xl ease-out duration-300 px-3 py-1 hover:opacity-75 ">
-          Logout
-        </button>
+        {session.status === 'authenticated' && (
+          <button
+            className="bg-blue-700 text-white rounded-xl ease-out duration-300 px-3 py-1 hover:opacity-75 "
+            onClick={() => signOut()}>
+            Logout
+          </button>
+        )}
       </div>
     </div>
   );
