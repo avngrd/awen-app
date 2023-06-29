@@ -5,10 +5,10 @@ import styles from '@/app/contact/page.module.css';
 import Lottie from 'lottie-react';
 import animationData from '../../../public/anim2.json';
 
-export const metadata = {
-  title: 'Awen Contact Form',
-  description: 'This is Contact Page',
-};
+// export const metadata = {
+//   title: 'Awen Contact Form',
+//   description: 'This is Contact Page',
+// };
 
 const Contact = () => {
   return (
