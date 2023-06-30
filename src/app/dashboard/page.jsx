@@ -3,7 +3,7 @@ import React from 'react';
 import { useSession } from 'next-auth/react';
 import useSWR from 'swr';
 import { useRouter } from 'next/navigation';
-import styles from '@/app/dashboard/page.module.css';
+import styles from './page.module.css';
 import Image from 'next/image';
 
 const Dashboard = () => {
@@ -23,23 +23,26 @@ const Dashboard = () => {
   }
 
   if (session.status === 'unauthenticated') {
-    router?.push('/dashboard/login');
+    router?.push('/dashboard/register');
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target[0].value;
     const desc = e.target[1].value;
-    const img = e.target[2].value;
+    const image = e.target[2].value;
     const content = e.target[3].value;
 
     try {
       await fetch('/api/posts', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
           title,
           desc,
-          img,
+          image,
           content,
           username: session.data.user.name,
         }),
@@ -53,7 +56,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`api/posts/${id}`, {
+      await fetch(`/api/posts/${id}`, {
         method: 'DELETE',
       });
       mutate();
@@ -70,12 +73,20 @@ const Dashboard = () => {
             ? 'Loading..'
             : data?.map((post) => (
                 <div className={styles.post} key={post._id}>
-                  <Image src={post.image} alt="Post Image"></Image>
+                  <Image
+                    width={150}
+                    height={150}
+                    src={post.image}
+                    className={styles.imagepost}
+                    alt="Post Image"></Image>
                   <div className={styles.postleft}>
                     <h1 className={styles.posttitle}>{post.title}</h1>
-                    <span className={styles.delete} onClick={() => handleDelete(post._id)}>
-                      X
-                    </span>
+                    <button
+                      className="px-3 py-1 rounded-xl duration-100 ease-linear
+                      bg-gradient-to-r from-rose-500 via-rose-400 via-rose-600 to-rose-800 hover:opacity-80"
+                      onClick={() => handleDelete(post._id)}>
+                      Delete
+                    </button>
                   </div>
                 </div>
               ))}

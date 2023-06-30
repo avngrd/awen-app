@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       id: 2,
-      title: 'Portfolio',
+      title: 'CryptoSheets',
       url: '/portfolio',
     },
     {

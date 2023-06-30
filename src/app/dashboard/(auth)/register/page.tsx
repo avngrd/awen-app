@@ -36,7 +36,12 @@ const Register = () => {
 
   return (
     <div className="px-20 mt-20">
-      <h1 className={styles.title}>Register on AWEN!</h1>
+      <h1 className={styles.title}>
+        Register on{' '}
+        <span className=" text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700">
+          AWEN
+        </span>
+      </h1>
       <form action="" className={styles.formacc} onSubmit={handleSubmit}>
         <input type="text" placeholder="Username" required className={styles.userinput} />
         <input type="email" placeholder="Email" required className={styles.userinput} />

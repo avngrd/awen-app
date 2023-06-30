@@ -5,6 +5,7 @@
 .posts {
   display: flex;
   flex-direction: column;
+  margin-top: 140px;
 }
 
 .newpost {
@@ -67,3 +68,30 @@
 .sendButton:hover {
   opacity: 0.7;
 }
+
+.post {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  max-height: 150px;
+  align-items: center;
+}
+
+.imagepost {
+  border-radius: 15px;
+}
+
+.postleft {
+  margin-left: 40px;
+}
+
+.posttitle {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* .delete {
+  background-color: rgb(29 78 216);
+  padding: 6px 10px;
+  border-radius: 15px;
+} */

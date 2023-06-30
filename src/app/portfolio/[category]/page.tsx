@@ -22,9 +22,9 @@ const Category = ({ params }) => {
       {data.map((item) => (
         <div
           key={item.id}
-          className={`flex m-5 bg-sky-400 max-w-3xl px-3 py-2 rounded-xl items-center ${styles.categbox}`}>
-          <div className=" max-w-lg">
-            <h1 className="font-bold text-3xl">{item.title}</h1>
+          className={`flex m-5 bg-sky-400 px-3 py-2 rounded-xl items-center ${styles.categbox}`}>
+          <div className="">
+            <h1 className="font-bold text-3xl mb-3">{item.title}</h1>
             <p>{item.description}</p>
           </div>
           <div>

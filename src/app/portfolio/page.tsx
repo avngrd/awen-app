@@ -9,7 +9,7 @@ import animationData from '../../../public/robotanim.json';
 const Portfolio = () => {
   return (
     <div className="">
-      <h1 className="text-center font-bold text-3xl">All projects</h1>
+      <h1 className="text-center font-bold text-3xl">Choose category</h1>
       <div className={styles.items}>
         <Link href="/portfolio/defi" className={styles.item}>
           <span className={styles.categoryname}>DeFi</span>

@@ -5,7 +5,7 @@
   max-width: 400px;
   background-color: rgba(0, 46, 201, 1);
 
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
   border-radius: 30px;
   margin-bottom: 40px;
 }
@@ -53,4 +53,11 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.awentitle {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
