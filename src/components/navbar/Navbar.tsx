@@ -46,8 +46,12 @@ const Navbar = () => {
       title: 'Dashboard',
       url: '/dashboard',
     },
+    {
+      id: 7,
+      title: 'Transaction trainer',
+      url: '/trainer',
+    },
   ];
-
   return (
     <div className=" px-20 py-6 flex items-center justify-between">
       <Link

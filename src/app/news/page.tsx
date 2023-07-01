@@ -1,12 +1,20 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// https://localhost:7195/api/Posts
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts', {
+  const res = await fetch('http://localhost:3000//api/posts', {
     cache: 'no-store',
+    // mode: 'no-cors',
+    // headers: {
+    //   'Content-Type': 'application/json',
+    // },
   });
   if (!res.ok) {
+    console.log(res);
     throw new Error('Failed to fetch data');
   }
 
