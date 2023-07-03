@@ -24,12 +24,12 @@ export default function Home() {
           </span>
         </h1>
         <p className=" max-w-xl">
-          Welcome to the world of our innovative crypto project that is creating its own token! We
-          are excited to introduce our latest development, which will make cryptocurrencies
-          accessible and convenient for everyone. Our team of talented developers has researched and
-          analyzed cutting-edge blockchain technologies to create a token that reflects our values
-          and aspirations. We are confident that our token represents the perfect combination of
-          security, efficiency, and user-friendliness.
+          Добро пожаловать в мир нашего инновационного криптопроекта, который создает свой
+          собственный токен! Мы рады представить наш последний разработки, которые сделают
+          криптовалюты доступными и удобными для всех. Наша команда талантливых разработчиков
+          исследовала и проанализировала передовые технологии блокчейна, чтобы создать токен,
+          который отражает наши ценности и стремления. Мы уверены, что наш токен представляет собой
+          идеальное сочетание безопасности, эффективности и удобства использования.
         </p>
         <button className="mt-10 font-medium flex items-center flex-row px-7 py-3 text-green-100 rounded-xl bg-gradient-to-r from-orange-800 via-yellow-600 via-yellow-500 to-orange-500 duration-300 ease-linear hover:opacity-90">
           {' '}

@@ -92,16 +92,16 @@ const Dashboard = () => {
               ))}
         </div>
         <form className={styles.newpost} onSubmit={handleSubmit}>
-          <h1 className={styles.addtitle}>Add New Post</h1>
-          <input type="text" placeholder="Title" className={styles.forminput}></input>
-          <input type="text" placeholder="Description" className={styles.forminput}></input>
-          <input type="text" placeholder="Image" className={styles.forminput}></input>
+          <h1 className={styles.addtitle}>Публикация новости!</h1>
+          <input type="text" placeholder="Заголовок" className={styles.forminput}></input>
+          <input type="text" placeholder="Описание" className={styles.forminput}></input>
+          <input type="text" placeholder="Фото" className={styles.forminput}></input>
           <textarea
             className={styles.contentarea}
-            placeholder="Content"
+            placeholder="Контент"
             cols="30"
             rows="10"></textarea>
-          <button className={styles.sendButton}>Send</button>
+          <button className={styles.sendButton}>Опубликовать</button>
         </form>
       </div>
     );

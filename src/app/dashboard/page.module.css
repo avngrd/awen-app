@@ -75,6 +75,7 @@
   flex-direction: row;
   max-height: 150px;
   align-items: center;
+  max-width: 900px;
 }
 
 .imagepost {

@@ -3,7 +3,7 @@ import React from 'react';
 const layout = ({ children }) => {
   return (
     <div className="px-20 mt-20">
-      <h1 className="font-bold text-4xl text-blue-700">Read our works about Crypto</h1>
+      <h1 className="font-bold text-4xl text-white">Читайте наши работы о криптовалюте!</h1>
       {children}
     </div>
   );

@@ -18,37 +18,37 @@ const Navbar = () => {
   const linksArray: ILink[] = [
     {
       id: 1,
-      title: 'Home',
+      title: 'Главная',
       url: '/',
     },
     {
       id: 2,
-      title: 'CryptoSheets',
+      title: 'Подсказки',
       url: '/portfolio',
     },
     {
       id: 3,
-      title: 'News',
+      title: 'Новости',
       url: '/news',
     },
     {
       id: 4,
-      title: 'Currencies',
+      title: 'Рынок',
       url: '/currencies',
     },
     {
       id: 5,
-      title: 'Contact',
+      title: 'Контакты',
       url: '/contact',
     },
     {
       id: 6,
-      title: 'Dashboard',
+      title: 'Добавить',
       url: '/dashboard',
     },
     {
       id: 7,
-      title: 'Transaction trainer',
+      title: 'Тренажер',
       url: '/trainer',
     },
   ];
@@ -72,11 +72,16 @@ const Navbar = () => {
           ))}
         </div>
         {session.status === 'authenticated' && (
-          <button
-            className="bg-blue-700 text-white rounded-xl ease-out duration-300 px-3 py-1 hover:opacity-75 "
-            onClick={() => signOut()}>
-            Logout
-          </button>
+          <div className="flex flex-row p-2 items-center bg-blue-700 rounded-lg">
+            <div className="flex flex-row">{session.data.user?.name}</div>
+            <button
+              className="bg-blue-700 text-white rounded-xl ease-out duration-300 px-3 py-1 hover:opacity-75 "
+              onClick={() => signOut()}>
+              <div className="bg-blue-400 p-1 rounded-lg">
+                <Image src="/logout.svg" width={15} height={15} alt="Logout"></Image>
+              </div>
+            </button>
+          </div>
         )}
       </div>
     </div>
